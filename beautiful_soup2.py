@@ -40,7 +40,7 @@ for produto, preco in zip (lista_produtos, lista_precos):
     #produto.contents[posicao inicial].text --> gera lista de produtos
     #replace retira ou troca uma informacao por outra 
     str_produto = produto.contents[0].text.replace(',','').replace('\n', '').replace('.','').replace('"','')
-    str_preco = preco.contents[0].text.replace('R$', '').replace('.','').replace(',','.')
+    str_preco = preco.contents[0].text.replace('R$', '').replace('.','').replace(',','.').replace('ESGOTADO','')
     
     # append junta as duas listas geradas em uma unica lista,
     #intercalando as informacoes com uma informacao de str_produto com str_preco
